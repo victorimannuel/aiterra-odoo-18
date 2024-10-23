@@ -1,0 +1,6 @@
+# Odoo configuration files
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
