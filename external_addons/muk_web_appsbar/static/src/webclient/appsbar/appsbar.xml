@@ -27,9 +27,11 @@
 			                		class="mk_apps_sidebar_icon" 
 			                		src="/base/static/description/icon.png"
 			                	/>
-						        <span class="mk_apps_sidebar_name">
-						            <t t-out="app.name"/>
-						        </span>
+						        <strong>
+									<span class="mk_apps_sidebar_name">
+										<t t-out="app.name"/>
+									</span>
+								</strong>
 			            	 </a>
 			            </li>
 			    	</t>
