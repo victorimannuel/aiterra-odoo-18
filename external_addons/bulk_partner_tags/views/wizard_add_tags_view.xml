@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_wizard_add_tags_form" model="ir.ui.view">
+        <field name="name">wizard.add.tags.form</field>
+        <field name="model">wizard.add.tags</field>
+        <field name="arch" type="xml">
+            <form string="Add Tags to Contacts">
+                <group>
+                    <field name="category_ids" widget="many2many_tags"/>
+                </group>
+                <footer>
+                    <button string="Apply" type="object" name="action_add_tags" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

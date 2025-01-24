@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="mailing_list_view_form_inherit" model="ir.ui.view">
+        <field name="name">mailing.list.view.form.inherit</field>
+        <field name="model">mailing.list</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_list_view_form"/>
+        <field name="arch" type="xml">
+            <field name="active" position="after">
+                <field name="auto_sync_contacts"/>
+                <field name="contact_filter_domain" widget="domain" 
+                       options="{'model': 'res.partner'}" 
+                       invisible="not auto_sync_contacts"/>
+                <button name="action_sync_contacts" 
+                        string="Sync Contacts Now" 
+                        type="object" 
+                        class="oe_highlight"
+                        invisible="not auto_sync_contacts"/>
+            </field>
+        </field>
+    </record>
+</odoo>
